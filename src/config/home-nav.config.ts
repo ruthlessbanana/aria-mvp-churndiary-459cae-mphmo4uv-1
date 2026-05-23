@@ -20,11 +20,10 @@
  *   - Routes referenced here MUST exist in `primaryAppRoutes`.
  *   - Empty arrays are valid (template default).
  *
- *   **HREDS MUST BE STATIC**: hrefs containing `[bracket]` segments (e.g. `[id]`, `[slug]`)
- *   are FORBIDDEN. The /home shell has no dynamic id in scope, so `<Link href="/home/boards/[id]/listings">`
- *   navigates to that literal path and 404s at runtime (`useParams().id === "[id]"`). Link to
- *   child-of-dynamic routes from the parent detail page using a template literal:
- *   `<Link href={\`/home/boards/${board.id}/listings\`}>...</Link>`. The template's
+ *   HREFs MUST BE STATIC. Dynamic-bracket segments are FORBIDDEN here. The /home shell
+ *   has no row id in scope, so a literal dynamic href navigates to that path verbatim
+ *   and 404s at runtime. Link to child-of-dynamic routes from the parent detail page
+ *   using a template literal that substitutes the actual id. The template's
  *   `home-shell.tsx` will silently drop any dynamic-href entry as a runtime safety net.
  */
 
@@ -52,6 +51,12 @@ export type HomeNavConfig = {
  * actions/sub-nav derived from the MVP spec's `navigation` block.
  */
 export const homeNavConfig: HomeNavConfig = {
-  homeHeaderActions: [],
-  homeSubNav: [],
+  homeHeaderActions: [
+    { label: "+ Log Cancellation", href: "/home/cancellations/new" },
+    { label: "+ Add Trial", href: "/home/trials/new" },
+  ],
+  homeSubNav: [
+    { label: "Cancellations", href: "/home" },
+    { label: "Active Trials", href: "/home" },
+  ],
 };

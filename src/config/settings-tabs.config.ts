@@ -29,4 +29,6 @@ export type SettingsTab = {
   label: string;
 };
 
-export const extraSettingsTabs: SettingsTab[] = [];
+export const extraSettingsTabs: SettingsTab[] = [
+  { slug: "notifications", label: "Notifications" },
+];
