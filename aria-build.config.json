@@ -1,34 +1,41 @@
 {
-  "appName": "ChurnDiary",
-  "appTagline": "Log every subscription you cancel, why you left, and what you hoped for — ChurnDiary builds your personal 'what I actually keep vs. regret' ledger and reminds you 7 days before any new free trial converts, so you stop re-subscribing to things you already know disappoint you. Switch trigger: unlike generic budget trackers, ChurnDiary remembers the qualitative reason you left each service, not just the dollar amount, so the next 'free trial' popup gets a personal warning instead of amnesia.",
-  "ideaId": "459cae70-2086-4e3f-8b8e-7e8bf11e31af",
-  "monetizationMode": "has_free_tier",
-  "supportEmail": "cs@gmail.com",
-  "plans": [
-    {
-      "tierSlug": "starter",
-      "displayName": "Starter",
-      "amount": 0,
-      "currency": "USD",
-      "interval": "month",
-      "isFree": true
-    }
-  ],
-  "gating": {
-    "requireActiveSubscriptionForProtectedActions": false,
-    "gatedRoutes": [],
-    "hasPaidPlan": false
-  },
-  "pricing": {
-    "planName": "Starter",
-    "amount": 0,
-    "currency": "USD",
-    "interval": "month"
-  },
-  "integrations": ["neon", "github", "vercel", "resend"],
-  "branding": {
-    "primaryColor": "#171717",
-    "accentColor": "#f5f5f5",
-    "logoUrl": "/brand/logo.png"
-  }
+    "appTagline":  "Log every subscription you cancel, why you left, and what you hoped for.",
+    "monetizationMode":  "has_free_tier",
+    "supportEmail":  "cs@gmail.com",
+    "ideaId":  "459cae70-2086-4e3f-8b8e-7e8bf11e31af",
+    "gating":  {
+                   "requireActiveSubscriptionForProtectedActions":  false,
+                   "hasPaidPlan":  false,
+                   "gatedRoutes":  [
+
+                                   ]
+               },
+    "integrations":  [
+                         "neon",
+                         "github",
+                         "vercel",
+                         "resend"
+                     ],
+    "pricing":  {
+                    "amount":  0,
+                    "currency":  "USD",
+                    "planName":  "Starter",
+                    "interval":  "month"
+                },
+    "plans":  [
+                  {
+                      "displayName":  "Starter",
+                      "interval":  "month",
+                      "tierSlug":  "starter",
+                      "isFree":  true,
+                      "currency":  "USD",
+                      "amount":  0
+                  }
+              ],
+    "branding":  {
+                     "accentColor":  "#f5f5f5",
+                     "primaryColor":  "#171717",
+                     "logoUrl":  "/brand/logo.png"
+                 },
+    "appName":  "ChurnDiary"
 }
