@@ -25,12 +25,7 @@
     "currency": "USD",
     "interval": "month"
   },
-  "integrations": [
-    "neon",
-    "stripe",
-    "github",
-    "vercel"
-  ],
+  "integrations": ["neon", "github", "vercel", "resend"],
   "branding": {
     "primaryColor": "#171717",
     "accentColor": "#f5f5f5",
